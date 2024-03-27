@@ -1,0 +1,45 @@
+﻿<Page x:Class="Stock_Exchange_WPF.Buy_Client_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Stock_Exchange_WPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="377.426086956522" d:DesignWidth="800"
+      Title="Buy_Client_Page">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <ComboBox x:Name="Securities_ComboBox" Width="150" Height="30" SelectionChanged="Securities_ComboBox_SelectionChanged"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,23,0,0" Grid.Row="0" TextWrapping="Wrap" Text="Ценная бумага:" VerticalAlignment="Top" Width="200" TextAlignment="Center"/>
+
+        <TextBox x:Name="Quantity_TextBox" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="150" LostFocus="Quantity_TextBox_LostFocus"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,23,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Количесвто:" VerticalAlignment="Top" Width="200" TextAlignment="Center"/>
+        <TextBlock x:Name="QuantityMax_TextBlock" HorizontalAlignment="Left" Margin="35,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Макс:" VerticalAlignment="Center"/>
+        <TextBlock x:Name="QuantityError_TextBlock" HorizontalAlignment="Right" Margin="0,0,35,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Center" TextAlignment="Center" Width="60" Height="60"/>
+
+        <ComboBox x:Name="MethodPay_ComboBox" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Width="150" SelectionChanged="MethodPay_ComboBox_SelectionChanged"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,23,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Способ оплаты:" VerticalAlignment="Top" Width="200" TextAlignment="Center"/>
+
+        <TextBox x:Name="DateComplit_TextBox" HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="150" Grid.Column="1" LostFocus="DateComplit_TextBox_LostFocus"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Margin="0,23,0,0" TextWrapping="Wrap" Text="Дата Завершения:" VerticalAlignment="Top" Width="200" TextAlignment="Center"/>
+        <TextBlock x:Name="DateComplitError_TextBlock" HorizontalAlignment="Right" Margin="0,0,35,0" Grid.Column="1" TextWrapping="Wrap" Text="" VerticalAlignment="Center" TextAlignment="Center" Width="60" Height="60"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="15,0,0,0" Grid.Row="0" TextWrapping="Wrap" TextAlignment="Center" Text="гггг-мм-дд" VerticalAlignment="Center" Width="100"/>
+
+        <TextBox x:Name="AmountContr_TextBox" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="150" LostFocus="AmountContr_TextBox_LostFocus"/>
+        <TextBlock x:Name="AmountMax_TextBlock" Grid.Column="1" HorizontalAlignment="Center" Margin="0,23,0,0" Grid.Row="1" TextWrapping="Wrap" TextAlignment="Center" Text="Итоговая сумма:" VerticalAlignment="Top" Width="200"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="15,0,0,0" Grid.Row="1" TextWrapping="Wrap" TextAlignment="Center" Text="Внесенная сумма:" VerticalAlignment="Center" Width="100"/>
+        <TextBlock x:Name="AmountError_TextBlock" HorizontalAlignment="Right" Margin="0,0,35,0" Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Center" TextAlignment="Center" Width="60" Height="60"/>
+
+        <Button x:Name="Buy_Button" Grid.Column="1" Content="Купить" HorizontalAlignment="Center" Margin="0,0,0,10" Grid.Row="2" VerticalAlignment="Center" Width="150" Height="30" Click="Buy_Button_Click"/>
+
+    </Grid>
+</Page>

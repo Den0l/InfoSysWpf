@@ -1,0 +1,54 @@
+﻿<Window x:Class="Stock_Exchange_WPF.BrokerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Stock_Exchange_WPF"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="Кабиент брокера" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.15*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.15*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Column="4">
+            <MenuItem x:Name="Menu_Tables" Header="Таблицы">
+                <MenuItem x:Name="Menu_Transaction"  Header="Сделки" Click="Menu_Transaction_Click"/>
+                <MenuItem x:Name="Menu_Receipt"  Header="Квитанции" Click="Menu_Receipt_Click" />
+                <MenuItem x:Name="Menu_Clients"  Header="Клиенты" Click="Menu_Clients_Click"/>
+                <MenuItem x:Name="Menu_Securities"  Header="Ценные Бумаги" Click="Menu_Securities_Click"/>
+                <MenuItem x:Name="Menu_Owner"  Header="Владельцы" Click="Menu_Owner_Click"/>
+            </MenuItem>
+        </Menu>
+        <Button x:Name="Exit_Button" Grid.Column="0" Content="Выйти" Click="Exit_Button_Click"/>
+        <Button x:Name="Create_Button" Grid.Column="1" Content="Добавить" Click="Create_Button_Click"/>
+        <Button x:Name="Update_Button" Grid.Column="2" Content="Изменить" Click="Update_Button_Click"/>
+        <Button x:Name="Delete_Button" Grid.Column="3" Content="Удалить" Click="Delete_Button_Click"/>
+        <DataGrid x:Name="Broker_DataGrid" Grid.Row="1" Grid.ColumnSpan="5"/>
+        <TextBox x:Name="First_TextBox" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="40,10,0,0" Grid.Row="2" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Height="20"/>
+        <TextBox x:Name="Second_TextBox" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="40,40,0,0" Grid.Row="2" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Height="20"/>
+        <TextBox x:Name="Third_TextBox" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="150,10,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20"/>
+        <ComboBox x:Name="Fourth_ComboBox" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="150,40,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" Height="20"/>
+        <ComboBox x:Name="Five_ComboBox" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="110,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" Height="20"/>
+        <ComboBox x:Name="Six_ComboBox" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="110,40,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" Height="20"/>
+        <ComboBox x:Name="Seven_ComboBox" Grid.Column="3" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="100,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" Height="20"/>
+        <Button x:Name="CUD_Button" Grid.Column="3" HorizontalAlignment="Left" Margin="100,40,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" Height="20" Click="CUD_Button_Click"/>
+        <TextBlock x:Name="First_TextBlock" HorizontalAlignment="Left" Margin="5,0,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Дата созд:" VerticalAlignment="Top" Width="30" Height="30"/>
+        <TextBlock x:Name="Second_TextBlock" HorizontalAlignment="Left" Margin="5,30,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Дата заве:" VerticalAlignment="Top" Width="30" Height="30"/>
+        <TextBlock x:Name="Third_TextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="100,10,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Кол-во:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Fourth_TextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="100,30,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Ценная Бумага:" VerticalAlignment="Top" Width="45" Height="30"/>
+        <TextBlock x:Name="Five_TextBlock" Grid.Column="2" HorizontalAlignment="Left" Margin="60,10,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Клиент:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Six_TextBlock" Grid.Column="2" HorizontalAlignment="Left" Margin="60,30,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Метод оплаты:" VerticalAlignment="Top" Width="50" Height="30"/>
+        <TextBlock x:Name="Seven_TextBlock" Grid.Column="3" HorizontalAlignment="Left" Margin="55,10,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Статус:" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
